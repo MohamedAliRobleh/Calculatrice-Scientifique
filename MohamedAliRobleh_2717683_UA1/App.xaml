@@ -1,0 +1,213 @@
+﻿<Application x:Class="MohamedAliRobleh_2717683_UA1.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        
+        
+        <!-- Template pour Groupe 1 -->
+        <ControlTemplate x:Key="TemplateGroup1" TargetType="Button"> 
+            <Border x:Name="border"  CornerRadius="50" Background="#333333" >
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                             
+            </Border>
+
+            <!-- Changement de couleur au survol -->
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="border" Property="Background" Value= "#4A4A4A" />
+                </Trigger>
+                <!-- Changement de couleur au clic -->
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="border" Property="Background" Value="#1C1C1C" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <!-- Template pour Groupe 2  -->
+        <ControlTemplate x:Key="TemplateGroup2" TargetType="Button">
+            <Border x:Name="border"  CornerRadius="50" Background="#FF9500" >
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Border>
+            <!-- Changement de couleur au survol -->
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="border" Property="Background" Value="#FFA733" />
+                </Trigger>
+                <!-- Changement de couleur au clic -->
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="border" Property="Background" Value="#CC7A00" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <!-- Template pour Groupe 3 -->
+        <ControlTemplate x:Key="TemplateGroup3" TargetType="Button">
+            <Border x:Name="border"  CornerRadius="50" Background="#D4D4D2" >
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Border>
+            <!-- Changement de couleur au survol -->
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="border" Property="Background" Value="#E5E5E2" />
+                </Trigger>
+                <!-- Changement de couleur au clic -->
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="border" Property="Background" Value="#D4D4D2" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <!-- Template pour Button Egale -->
+        <ControlTemplate x:Key="TemplateEgale" TargetType="Button">
+            <Border x:Name="border"  CornerRadius="20" Background="#FF9500">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Border>
+            <!-- Changement de couleur au survol -->
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="border" Property="Background" Value="#FFA733" />
+                </Trigger>
+                <!-- Changement de couleur au clic -->
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="border" Property="Background" Value="#CC7A00" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+            
+    
+        <!-- Template pour le buton +/- -->
+        <ControlTemplate x:Key="TemplatePlusMoins" TargetType="Button">
+            <Border x:Name="border"  CornerRadius="20" Background="#333333">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Border>
+            <!-- Changement de couleur au survol -->
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="border" Property="Background" Value="#4A4A4A" />
+                </Trigger>
+                <!-- Changement de couleur au clic -->
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="border" Property="Background" Value="#1C1C1C" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+    
+    
+    
+    
+        <!-- Style pour Groupe 1 (Boutons 0-9, ., e, π, +/-) -->
+        <Style x:Key="Groupe1Style" TargetType="Button">
+            <Setter Property="Template" Value="{StaticResource TemplateGroup1}" />
+            <Setter Property="Foreground" Value="#FFFFFF" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="Width" Value="50" />
+            <Setter Property="Height" Value="50" />
+            <Setter Property="FontWeight" Value="Bold" />
+            
+            <Style.Triggers>
+                <!-- Changement de couleur au survol -->
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FFFFFF" />
+                </Trigger>
+                <!-- Changement de couleur au clic -->
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#FFFFFF" />
+                </Trigger>
+            </Style.Triggers>
+            
+            
+        </Style>
+
+        <!-- Style pour Groupe 2 (+, -, *, /) -->
+        <Style x:Key="Groupe2Style" TargetType="Button">
+            <Setter Property="Template" Value="{StaticResource TemplateGroup2}" />
+            <Setter Property="Background" Value="#FF9500" />
+            <Setter Property="Foreground" Value="#FFFFFF" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="Width" Value="50" />
+            <Setter Property="Height" Value="50" />
+            <Setter Property="FontWeight" Value="Bold" />
+            
+            <Style.Triggers>
+                <!-- Changement de couleur au survol -->
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FFFFFF" />
+                </Trigger>
+                <!-- Changement de couleur au clic -->
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#FFFFFF" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+
+            <!-- Style pour Groupe 3 (Sin, Cos, Tan, CE, C, Back) -->
+        
+        <Style x:Key="Groupe3Style" TargetType="Button">
+            <Setter Property="Template" Value="{StaticResource TemplateGroup3}" />
+            <Setter Property="Foreground" Value="#000000" />
+            <Setter Property="FontSize" Value="13" />
+            <Setter Property="Width" Value="50" />
+            <Setter Property="Height" Value="50" />
+            <Setter Property="FontWeight" Value="Bold" />
+           
+            <Style.Triggers>
+                <!-- Changement de couleur au survol -->
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#000000" />
+                </Trigger>
+                <!-- Changement de couleur au clic -->
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#000000" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Style pour Egale (=) -->
+        <Style x:Key="StyleEgale" TargetType="Button">
+            <Setter Property="Template" Value="{StaticResource TemplateEgale}" />
+
+            <Setter Property="Foreground" Value="#FFFFFF" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="Width" Value="50" />
+            <Setter Property="Height" Value="50" />
+            <Setter Property="FontWeight" Value="Bold" />
+            
+            <Style.Triggers>
+                <!-- Changement de couleur au survol -->
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FFFFFF" />
+                </Trigger>
+                <!-- Changement de couleur au clic -->
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#FFFFFF" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
+        <!-- Style pour Plus/Moins (+/-) -->
+        <Style x:Key="StylePlusMoins" TargetType="Button">
+            <Setter Property="Template" Value="{StaticResource TemplatePlusMoins}" />
+            <Setter Property="Foreground" Value="#FFFFFF" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="Width" Value="50" />
+            <Setter Property="Height" Value="50" />
+            <Setter Property="FontWeight" Value="Bold" />
+            
+            <Style.Triggers>
+                <!-- Changement de couleur au survol -->
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FFFFFF" />
+                </Trigger>
+                <!-- Changement de couleur au clic -->
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#FFFFFF" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+    </Application.Resources>
+            
+</Application>

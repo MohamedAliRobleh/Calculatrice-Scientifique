@@ -1,0 +1,70 @@
+﻿<Window x:Class="MohamedAliRobleh_2717683_UA1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+        mc:Ignorable="d"
+        Title="Mohamed_Ali_2717683_UA1" Height="500" Width="300" ResizeMode="NoResize" Background="Black">
+ <Grid>
+<Grid.ColumnDefinitions>
+<ColumnDefinition Width="*"/>
+<ColumnDefinition Width="*"/>
+<ColumnDefinition Width="*"/>
+<ColumnDefinition Width="*"/>
+<ColumnDefinition Width="*"/>
+</Grid.ColumnDefinitions>
+<Grid.RowDefinitions>
+<RowDefinition Height="*"/>
+<RowDefinition Height="*"/>
+<RowDefinition Height="*"/>
+<RowDefinition Height="*"/>
+<RowDefinition Height="*"/>
+<RowDefinition Height="*"/>
+<RowDefinition Height="*"/>
+<RowDefinition Height="*"/>
+</Grid.RowDefinitions>
+
+        <Label Name="ZoneSaisie" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" Content="" FontSize="15" Foreground="White" FontWeight="Regular" Background="Black" HorizontalAlignment="Right" VerticalAlignment="Center" />
+        <Label Name="Resultat" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" Content="0" FontSize="30" Foreground="White"  FontWeight="Bold" Background="Black" HorizontalAlignment="Right" VerticalAlignment="Center" />
+
+
+        <!--creation des boutons de fonctions (Groupe3)-->
+
+        <Button Grid.Row="2" Grid.Column="0" Content="Sin" Style="{StaticResource Groupe3Style}" Click="OnSin" />
+        <Button Grid.Row="2" Grid.Column="1" Content="Cos" Style="{StaticResource Groupe3Style}" Click="OnCos"/>
+        <Button Grid.Row="2" Grid.Column="2" Content="Tan" Style="{StaticResource Groupe3Style}" Click="OnTan"/>
+        <Button Grid.Row="2" Grid.Column="3" Content="CE" Style="{StaticResource  Groupe3Style}" Click="OnClearEntryClick" />
+        <Button Grid.Row="2" Grid.Column="4" Content="C" Style="{StaticResource   Groupe3Style}" Click="OnClearClick"/>
+        <Button Grid.Row="3" Grid.Column="0" Content="ArcSin" Style="{StaticResource Groupe3Style}" Click="OnArcSin"/>
+        <Button Grid.Row="3" Grid.Column="1" Content="ArcCos" Style="{StaticResource Groupe3Style}" Click="OnArcCos"/>
+        <Button Grid.Row="3" Grid.Column="2" Content="ArcTan" Style="{StaticResource Groupe3Style}" Click="OnArcTan"/>
+        <Button Grid.Row="3" Grid.Column="3" Content="Back" Style="{StaticResource  Groupe3Style}" Click="OnBackspaceClick" />
+ 
+     <!--creation des boutons des operateurs (Groupe2) -->
+        <Button Grid.Row="3" Grid.Column="4" Content="÷" Style="{StaticResource Groupe2Style}" Click="OnOperatorClick"/>
+        <Button Grid.Row="4" Grid.Column="4" Content="*" Style="{StaticResource Groupe2Style}" Click="OnOperatorClick"/>
+        <Button Grid.Row="5" Grid.Column="4" Content="-" Style="{StaticResource Groupe2Style}" Click="OnOperatorClick"/>
+        <Button Grid.Row="6" Grid.Column="4" Content="+" Style="{StaticResource Groupe2Style}" Click="OnOperatorClick"/>
+        <Button Grid.Row="7" Grid.Column="3" Grid.ColumnSpan="2" Width="100" Height="50"  Content="="  Style="{StaticResource StyleEgale}" Click="OnEqualsClick"/>
+ 
+     <!--creation des boutons des nombres (Groupe1) -->
+        <Button Grid.Row="4" Grid.Column="0" Content="π" Style="{StaticResource Groupe1Style}" Click="OnPiClick"/>
+        <Button Grid.Row="4" Grid.Column="1" Content="7" Style="{StaticResource Groupe1Style}" Click="Button_Click_Number"/>
+        <Button Grid.Row="4" Grid.Column="2" Content="8" Style="{StaticResource Groupe1Style}" Click="Button_Click_Number"/>
+        <Button Grid.Row="4" Grid.Column="3" Content="9" Style="{StaticResource Groupe1Style}" Click="Button_Click_Number"/>
+        <Button Grid.Row="5" Grid.Column="0" Content="e" Style="{StaticResource Groupe1Style}" Click="OnEClick" />
+        <Button Grid.Row="5" Grid.Column="1" Content="4" Style="{StaticResource Groupe1Style}" Click="Button_Click_Number"/>
+        <Button Grid.Row="5" Grid.Column="2" Content="5" Style="{StaticResource Groupe1Style}" Click="Button_Click_Number"/>
+        <Button Grid.Row="5" Grid.Column="3" Content="6" Style="{StaticResource Groupe1Style}" Click="Button_Click_Number" />
+        <Button Grid.Row="6" Grid.Column="1" Content="1" Style="{StaticResource Groupe1Style}" Click="Button_Click_Number"/>
+        <Button Grid.Row="6" Grid.Column="2" Content="2" Style="{StaticResource Groupe1Style}" Click="Button_Click_Number" />
+        <Button Grid.Row="6" Grid.Column="3" Content="3" Style="{StaticResource Groupe1Style}" Click="Button_Click_Number"/>
+        <Button Grid.Row="7" Grid.Column="1" Content="0" Style="{StaticResource Groupe1Style}" Click="Button_Click_Number"/>
+        <Button Grid.Row="7" Grid.Column="2" Content="." Style="{StaticResource Groupe1Style}" Click="OnDecimalClick" />
+        <Button Grid.Row="6" Grid.Column="0" Content="+/-" Grid.RowSpan="2" Width="50" Height="100" Style="{StaticResource StylePlusMoins}" Click="OnPlusMin"/>
+ 
+ 
+</Grid>
+       
+</Window>
